@@ -7,7 +7,7 @@ defmodule AuthorizeNet.Mixfile do
       name: "elixir_authorizenet",
       source_url: "https://github.com/marcelog/elixir_authorizenet",
       version: "0.4.1",
-      elixir: ">= 1.1.0",
+      elixir: "~> 1.10",
       description: description(),
       package: package(),
       deps: deps()
@@ -47,12 +47,10 @@ User guide at: https://github.com/marcelog/elixir_authorizenet.
 
   defp deps do
     [
-      {:ibrowse, "~> 4.4.0"},
-      {:earmark, "~> 1.0.3", only: :dev},
-      {:ex_doc, "~> 0.14.5", only: :dev},
-      {:coverex, "~> 1.4.12", only: :test},
-      {:sweet_xml, "~> 0.6.4"},
-      {:xml_builder, "~> 0.0.9"},
+      {:ibrowse, "~> 4.4"},
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      {:sweet_xml, "~> 0.6"},
+      {:xml_builder, "~> 2.1", override: true},
       {:servito, "~> 0.0.10", only: :test}
     ]
   end
