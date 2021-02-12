@@ -16,10 +16,7 @@ defmodule AuthorizeNet.Mixfile do
 
   def application do
     [
-      applications: [
-        :logger,
-        :ibrowse
-      ]
+      extra_applications: [:logger]
     ]
   end
 
