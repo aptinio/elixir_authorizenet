@@ -902,7 +902,7 @@ defmodule AuthorizeNetTest do
         T.duty("duty_name", "duty_description", 3.44) |>
         T.ship_to(address) |>
         T.shipping_cost("ship_cost", "ship_description", 3.44) |>
-        T.user_fields(%{"key1": "value1", "key2": "value2"}) |>
+        T.user_fields(%{key1: "value1", key2: "value2"}) |>
         T.order("4455", "order_description") |>
         T.add_item(1, "item1", "itemdesc1", 1, 1.00) |>
         T.add_item(2, "item2", "itemdesc2", 1, 2.00) |>
