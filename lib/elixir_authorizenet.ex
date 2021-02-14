@@ -84,11 +84,7 @@ defmodule AuthorizeNet do
   end
 
   defp uri() do
-    if Mix.env === :test do
-      config :test_server_uri
-    else
-      @uris[config(:environment)]
-    end
+    config(:test_server_uri) || Keyword.fetch!(@uris, config(:environment))
   end
 
   defp config(key) do
